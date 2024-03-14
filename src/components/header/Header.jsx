@@ -8,11 +8,11 @@ import './header.scss';
 const Header = () => {
 
     return(
-        <div className='header-main'>
+        <header className='header-main'>
             <img src={logo} alt="logo" className='header-logo'/>
             <HeaderNavigation/>
             <Switch/>
-        </div>
+        </header>
     )
 
 }
