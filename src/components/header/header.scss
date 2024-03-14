@@ -1,10 +1,12 @@
 
 .header-main {
+    max-width: 1240px;
     height: 103px;
     background-color:#030304;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 
 .header-logo {

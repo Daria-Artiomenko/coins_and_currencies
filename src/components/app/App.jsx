@@ -1,14 +1,16 @@
-
 import Header from '../header/Header'
+import MainPage from '../pages/mainPage/MainPage';
+
 import './App.css'
 
 const App = () => {
 
   return (
     <>
-      <div>
         <Header/>
-      </div>
+        <main>
+            <MainPage/>
+        </main>
     </>
   )
 }
