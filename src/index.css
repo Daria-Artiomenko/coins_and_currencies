@@ -1,14 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color-scheme: dark;
+  background-color:#030304;
 }
 
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 a {
   text-decoration: none;
