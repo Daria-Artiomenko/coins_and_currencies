@@ -12,7 +12,6 @@ const CurrencyList = () => {
     const currenciesData = currenciesList.data?.data.data;
     const exchangeRatesData = exchangeRates.data?.data.data;
 
-    console.log(exchangeRatesData)
     return (
 
         <section className="currency-cards-list">
@@ -26,7 +25,6 @@ const CurrencyList = () => {
                     currency={currenciesData[key].name}
                     exchangeValue={exchangeRatesData[key].value}
                     thumbPath={currenciesInfo[key]}
-                    shortNameCurr={exchangeRatesData[key].code}
                     currencySymbol={currenciesData[key]["symbol_native"]}
                     />
                 ))}
