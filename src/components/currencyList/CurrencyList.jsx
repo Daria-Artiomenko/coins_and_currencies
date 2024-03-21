@@ -1,20 +1,37 @@
-import icon from '../../assets/icons/Bovespa.svg';
+import { useQuery } from "@tanstack/react-query";
+import { getCurrencies, getExchange } from "../../services/getResponse";
+import { currenciesInfo } from "../../data/currenciesInfo";
+import CurrencyCard from "../currencyCard/CurrencyCard";
 import './currencyList.scss';
-import getResponse from '../../services/getResponse';
+
 
 const CurrencyList = () => {
+    const currenciesList = useQuery({ queryKey: ["currencies"], queryFn: getCurrencies });
+    const exchangeRates = useQuery({ queryKey: ["exchangeRates"], queryFn: getExchange });
 
+    const currenciesData = currenciesList.data?.data.data;
+    const exchangeRatesData = exchangeRates.data?.data.data;
 
-
+    console.log(exchangeRatesData)
     return (
-        <div className="currency-card">
-            <img src={icon} alt="Bovespa"/>
-            <div>
-                <h4 className="currency-card-name">Bovespa Index</h4>
-                <div className="currency-card-value">0.15%</div>
-            </div>
 
-        </div>
+        <section className="currency-cards-list">
+            <div className="container">
+                {currenciesData &&
+                    currenciesInfo &&
+                exchangeRatesData &&
+                Object.keys(currenciesData).map((key) => (
+                    <CurrencyCard
+                    key={exchangeRatesData[key].code}
+                    currency={currenciesData[key].name}
+                    exchangeValue={exchangeRatesData[key].value}
+                    thumbPath={currenciesInfo[key]}
+                    shortNameCurr={exchangeRatesData[key].code}
+                    currencySymbol={currenciesData[key]["symbol_native"]}
+                    />
+                ))}
+            </div>
+          </section>
     )
 }
 

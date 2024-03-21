@@ -1,23 +1,10 @@
-.currency-card {
-    display: flex;
-    border: 1px solid #474747;
-    border-radius: 8px;
-    padding: 30px 100px 30px 32px;
-    width: 520px;
-    height: 153px;
-    gap: 10px;
-    text-align: left;
-    &-name {
-        font-weight: 400;
-        font-size: 35px;
-        line-height: 141%;
-        color: #d9d9d9;
-
-    }
-    &-value {
-        font-weight: 300;
-        font-size: 32px;
-        line-height: 129%;
-        color: #a7b2c3;
+.currency-cards-list {
+    padding: 50px 0 96px 0;
+    .container {
+        max-width: 1224px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
