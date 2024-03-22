@@ -11,23 +11,27 @@ const CurrencyList = () => {
 
     const currenciesData = currenciesList.data?.data.data;
     const exchangeRatesData = exchangeRates.data?.data.data;
-
+    
     return (
 
-        <section className="currency-cards-list">
+        <section className="currency-cards">
             <div className="container">
-                {currenciesData &&
+                <div className="currency-cards-title">Currencies</div>
+                <div className="currency-cards-line"></div>
+                <div className="currency-cards-list">
+                    {currenciesData &&
                     currenciesInfo &&
-                exchangeRatesData &&
-                Object.keys(currenciesData).map((key) => (
-                    <CurrencyCard
-                    key={exchangeRatesData[key].code}
-                    currency={currenciesData[key].name}
-                    exchangeValue={exchangeRatesData[key].value}
-                    thumbPath={currenciesInfo[key]}
-                    currencySymbol={currenciesData[key]["symbol_native"]}
-                    />
-                ))}
+                    exchangeRatesData &&
+                    Object.keys(currenciesData).map((key) => (
+                        <CurrencyCard
+                        key={exchangeRatesData[key].code}
+                        currency={currenciesData[key].name}
+                        exchangeValue={exchangeRatesData[key].value}
+                        thumbPath={currenciesInfo[key]}
+                        currencySymbol={currenciesData[key]["symbol_native"]}
+                        />
+                    ))}
+                </div>
             </div>
           </section>
     )

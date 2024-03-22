@@ -1,0 +1,76 @@
+.modal-convert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: 50px;
+    &-dialog {
+        position: relative;
+        padding: 40px;
+        border: 1px solid #474747;
+        border-radius: 8px;
+        width: 432px;
+        height: 533px;
+        background: #202025;
+        margin: 0 auto;
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 137%;
+        background: linear-gradient(90deg, #6b23df 0%, #a500ce 50.5%, #dc005c 98.5%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-line {
+        background: #474747;
+        width: 330px;
+        height: 2px;
+        border:none;
+        margin-top: 18px;
+    }
+    &-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        border-radius: 8px;
+        width: 25px;
+        height: 25px;
+        color:#F1F1F1;
+        background: #494f57;
+        padding-top: 1px;
+        text-align: center;
+    }
+    &-form {
+        margin-top: 30px;
+    }
+    &-label {
+        text-align: left;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 190%;
+        color: #a7b2c3;
+    }
+    &-select {
+        position: relative;
+        border-radius: 8px;
+        width: 330px;
+        height: 52px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+    &-input {
+        margin-top: 14px;
+        border-radius: 8px;
+        width: 330px;
+        height: 52px;
+        padding: 4px 8px;
+    }
+}

@@ -1,8 +1,23 @@
-.currency-cards-list {
+.currency-cards {
     padding: 50px 0 96px 0;
     .container {
         max-width: 1224px;
         margin: 0 auto;
+    }
+    &-title{
+        text-align: left;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 129%;
+        color: #fff;
+    }
+    &-line {
+        width: 520px;
+        height: 2px;
+        background: #474747;
+        margin-top: 24px;
+    }
+    &-list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;

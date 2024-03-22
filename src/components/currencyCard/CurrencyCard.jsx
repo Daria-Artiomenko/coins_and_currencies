@@ -8,7 +8,7 @@ const CurrencyCard = (props) => {
 
 
     return(
-        <a href='#' className="currency-card">
+        <button className="currency-card">
             <img src={thumbPath} alt="currency card"/>
             <div>
                 <h4 className="currency-card-name">{currency}</h4>
@@ -16,7 +16,7 @@ const CurrencyCard = (props) => {
                     <span className='currency-card-symbol'>{currencySymbol}</span>
                 </div>
             </div>
-        </a> 
+        </button> 
     )
 }
 CurrencyCard.propTypes = {
