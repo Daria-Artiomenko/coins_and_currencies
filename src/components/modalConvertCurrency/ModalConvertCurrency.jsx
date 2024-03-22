@@ -1,4 +1,4 @@
-import { currenciesInfo } from "../../data/currenciesInfo";
+import SelectCurrency from "../selectCurrency/SelectCurrency";
 import './modalConvertCurrency.scss'
 
 const ModalConvertCurrency = () => {
@@ -13,20 +13,12 @@ const ModalConvertCurrency = () => {
                     <div className="modal-convert-form">
                         <label htmlFor="" className="modal-convert-label">
                             From:
-                            <select type="select" className="modal-convert-select">
-                                {Object.keys(currenciesInfo).map((key) => (
-                                    <option value={0} key={key} className="modal-convert-option">{key}</option>
-                                ))}
-                            </select>
+                            <SelectCurrency/>
                         </label>
                         <input type="number" className="modal-convert-input"/>
                         <label htmlFor="" className="modal-convert-label">
                             To:
-                            <select type="select" className="modal-convert-select">
-                                {Object.keys(currenciesInfo).map((key) => (
-                                    <option value={0} key={key} className="modal-convert-option">{key}</option>
-                                ))}
-                            </select>
+                            <SelectCurrency/>
                         </label>
                         <input type="number" placeholder='' className="modal-convert-input"/>
                     </div>
