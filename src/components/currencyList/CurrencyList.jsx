@@ -12,14 +12,16 @@ const CurrencyList = () => {
     const currenciesList = useQuery({ queryKey: ["currencies"], queryFn: getCurrencies });
     const exchangeRates = useQuery({ queryKey: ["exchangeRates"], queryFn: getExchange });
     const [showModal, setShowModal] = useState(false);
+    const [currencySelect, setCurrencySelect] = useState("");
 
     const currenciesData = currenciesList.data?.data.data;
     const exchangeRatesData = exchangeRates.data?.data.data;
 
 
-    const openModal = () => {
+    const openModal = (key) => {
         document.body.style.overflow = 'hidden';
         setShowModal(true);
+        setCurrencySelect(key);
       };
     
     const closeModal = () => {
@@ -44,14 +46,14 @@ const CurrencyList = () => {
                         exchangeValue={exchangeRatesData[key].value}
                         thumbPath={currenciesInfo[key]}
                         currencySymbol={currenciesData[key]["symbol_native"]}
-                        onClick={openModal}
+                        onClick={() => openModal(key)}
                         />
                     ))}
                 </div>
             </div>
             {showModal && 
             <PortalModal>
-                <ModalConvertCurrency onClose={closeModal}/>
+                <ModalConvertCurrency currencySelect={currencySelect} onClose={closeModal}/>
             </PortalModal>}
           </section>
     )

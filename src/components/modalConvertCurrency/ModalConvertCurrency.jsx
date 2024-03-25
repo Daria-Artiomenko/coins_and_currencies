@@ -1,13 +1,15 @@
-// import { useState } from "react";
+import { useState } from "react";
 import PropTypes from 'prop-types';
 
 import SelectCurrency from "../selectCurrency/SelectCurrency";
 import './modalConvertCurrency.scss';
 
 
+const ModalConvertCurrency = ({onClose, currencySelect}) => {
+    const [selectInputFrom, setSelectInputFrom] = useState("USD");
+    const [selectInputTo, setSelectInputTo] = useState(currencySelect);
 
-const ModalConvertCurrency = ({onClose}) => {
-
+    
     return (
         <div className="modal-convert" onClick={onClose}>
             <div className="modal-convert-dialog" onClick={e => e.stopPropagation()}>
@@ -18,12 +20,12 @@ const ModalConvertCurrency = ({onClose}) => {
                     <div className="modal-convert-form">
                         <label htmlFor="" className="modal-convert-label">
                             From:
-                            <SelectCurrency/>
+                            <SelectCurrency select={selectInputFrom} setSelect={setSelectInputFrom}/>
                         </label>
-                        <input type="number" className="modal-convert-input"/>
+                        <input type="number" className="modal-convert-input" value={1}/>
                         <label htmlFor="" className="modal-convert-label">
                             To:
-                            <SelectCurrency/>
+                            <SelectCurrency select={selectInputTo} setSelect={setSelectInputTo}/>
                         </label>
                         <input type="number" placeholder='' className="modal-convert-input"/>
                     </div>
@@ -33,6 +35,7 @@ const ModalConvertCurrency = ({onClose}) => {
     )
 }
 ModalConvertCurrency.propTypes = {
-	onClose: PropTypes.func
+	onClose: PropTypes.func,
+    currencySelect: PropTypes.string,
 }
 export default ModalConvertCurrency;
