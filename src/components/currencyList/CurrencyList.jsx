@@ -1,17 +1,32 @@
 import { useQuery } from "@tanstack/react-query";
 import { getCurrencies, getExchange } from "../../services/getResponse";
 import { currenciesInfo } from "../../data/currenciesInfo";
+import { useState } from "react";
 import CurrencyCard from "../currencyCard/CurrencyCard";
 import './currencyList.scss';
+import PortalModal from "../modalConvertCurrency/PortalModal";
+import ModalConvertCurrency from "../modalConvertCurrency/ModalConvertCurrency";
 
 
 const CurrencyList = () => {
     const currenciesList = useQuery({ queryKey: ["currencies"], queryFn: getCurrencies });
     const exchangeRates = useQuery({ queryKey: ["exchangeRates"], queryFn: getExchange });
+    const [showModal, setShowModal] = useState(false);
 
     const currenciesData = currenciesList.data?.data.data;
     const exchangeRatesData = exchangeRates.data?.data.data;
+
+
+    const openModal = () => {
+        document.body.style.overflow = 'hidden';
+        setShowModal(true);
+      };
     
+    const closeModal = () => {
+        document.body.style.overflow = '';
+        setShowModal(false);
+      };
+
     return (
 
         <section className="currency-cards">
@@ -29,10 +44,15 @@ const CurrencyList = () => {
                         exchangeValue={exchangeRatesData[key].value}
                         thumbPath={currenciesInfo[key]}
                         currencySymbol={currenciesData[key]["symbol_native"]}
+                        onClick={openModal}
                         />
                     ))}
                 </div>
             </div>
+            {showModal && 
+            <PortalModal>
+                <ModalConvertCurrency onClose={closeModal}/>
+            </PortalModal>}
           </section>
     )
 }

@@ -17,6 +17,7 @@
         height: 533px;
         background: #202025;
         margin: 0 auto;
+        z-index: 10;
     }
     &-title {
         font-weight: 600;
@@ -46,6 +47,10 @@
         background: #494f57;
         padding-top: 1px;
         text-align: center;
+        cursor: pointer;
+        &:hover {
+            background:#6B23DF;
+        }
     }
     &-form {
         margin-top: 30px;

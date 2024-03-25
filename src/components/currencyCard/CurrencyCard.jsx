@@ -3,12 +3,12 @@ import './currencyCard.scss';
 
 
 const CurrencyCard = (props) => {
-    const {currency, exchangeValue, currencySymbol, thumbPath} = props;
+    const {currency, exchangeValue, currencySymbol, thumbPath, onClick} = props;
     const exchangeRateValue = (currency === 'Bitcoin') ? exchangeValue : +(exchangeValue.toFixed(2));
 
 
     return(
-        <button className="currency-card">
+        <button className="currency-card" onClick={onClick}>
             <img src={thumbPath} alt="currency card"/>
             <div>
                 <h4 className="currency-card-name">{currency}</h4>
@@ -20,6 +20,7 @@ const CurrencyCard = (props) => {
     )
 }
 CurrencyCard.propTypes = {
+    onClick: PropTypes.func,
     thumbPath: PropTypes.string,
     currency: PropTypes.string,
     exchangeValue: PropTypes.number,
