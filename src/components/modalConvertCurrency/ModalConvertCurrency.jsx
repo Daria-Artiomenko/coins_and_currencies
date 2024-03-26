@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import PropTypes from 'prop-types';
+
 
 import SelectCurrency from "../selectCurrency/SelectCurrency";
 import './modalConvertCurrency.scss';
 
 
-const ModalConvertCurrency = ({onClose, currencySelect}) => {
+const ModalConvertCurrency = ({onClose, currencySelect, exchangeRates}) => {
+
     const [selectInputFrom, setSelectInputFrom] = useState("USD");
     const [selectInputTo, setSelectInputTo] = useState(currencySelect);
+    const [inputValueFrom, setInputValueFrom] = useState(1);
+    const [inputValueTo, setInputValueTo] = useState(+(exchangeRates[selectInputTo].value.toFixed(4)))
+    
+    const calcExchange = useCallback((inputValueFrom) => {
+        if (selectInputTo === "BTC") {
+            setInputValueTo(((inputValueFrom / exchangeRates[selectInputFrom].value * exchangeRates[selectInputTo].value).toFixed(8)))
+        } else {
+            setInputValueTo(+((inputValueFrom / exchangeRates[selectInputFrom].value * exchangeRates[selectInputTo].value).toFixed(4)))
+        }
+        
+    }, [selectInputFrom, selectInputTo, exchangeRates])
 
+    useEffect(() => {
+        calcExchange(inputValueFrom);
+      }, [inputValueFrom, selectInputFrom, selectInputTo, calcExchange]);
     
     return (
         <div className="modal-convert" onClick={onClose}>
@@ -22,12 +38,19 @@ const ModalConvertCurrency = ({onClose, currencySelect}) => {
                             From:
                             <SelectCurrency select={selectInputFrom} setSelect={setSelectInputFrom}/>
                         </label>
-                        <input type="number" className="modal-convert-input" value={1}/>
+                        <input 
+                            type="number" 
+                            className="modal-convert-input" 
+                            value={inputValueFrom}
+                            onChange={e => setInputValueFrom(e.target.value)}/>
                         <label htmlFor="" className="modal-convert-label">
                             To:
                             <SelectCurrency select={selectInputTo} setSelect={setSelectInputTo}/>
                         </label>
-                        <input type="number" placeholder='' className="modal-convert-input"/>
+                        <input type="number"
+                            className="modal-convert-input"
+                            value={inputValueTo}
+                            onChange={calcExchange}/>
                     </div>
                 </div>
             </div>
@@ -35,6 +58,7 @@ const ModalConvertCurrency = ({onClose, currencySelect}) => {
     )
 }
 ModalConvertCurrency.propTypes = {
+    exchangeRates: PropTypes.object,
 	onClose: PropTypes.func,
     currencySelect: PropTypes.string,
 }

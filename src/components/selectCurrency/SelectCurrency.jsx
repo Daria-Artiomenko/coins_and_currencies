@@ -9,7 +9,8 @@ const SelectCurrency = ({select, setSelect}) => {
             <option 
                 key={key} 
                 className="select-currency-option"
-                selected={(select === key) ? true : false}
+                // selected={(select === key) ? true : false}
+                // value={select}
                 onChange={(e) => setSelect(e.target.value)}
                 >
                 {key}

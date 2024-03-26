@@ -17,7 +17,6 @@ const CurrencyList = () => {
     const currenciesData = currenciesList.data?.data.data;
     const exchangeRatesData = exchangeRates.data?.data.data;
 
-
     const openModal = (key) => {
         document.body.style.overflow = 'hidden';
         setShowModal(true);
@@ -53,7 +52,7 @@ const CurrencyList = () => {
             </div>
             {showModal && 
             <PortalModal>
-                <ModalConvertCurrency currencySelect={currencySelect} onClose={closeModal}/>
+                <ModalConvertCurrency currencySelect={currencySelect} onClose={closeModal} exchangeRates={exchangeRatesData}/>
             </PortalModal>}
           </section>
     )
