@@ -1,9 +1,10 @@
 import Header from '../header/Header';
-import MainPage from '../pages/mainPage/MainPage';
+import TimelinePage from '../pages/timelinePage/TimelinePage';
+// import MainPage from '../pages/mainPage/MainPage';
 import Footer from '../footer/Footer';
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import './App.css';
 import {QueryClientProvider, QueryClient } from '@tanstack/react-query';
+
 
 const App = () => {
 
@@ -28,7 +29,8 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
         <Header/>
         <main>
-            <MainPage/>
+            {/* <MainPage/> */}
+            <TimelinePage/>
         </main>
 
         <Footer/>
