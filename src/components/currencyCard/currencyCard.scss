@@ -1,3 +1,4 @@
+@import '../../styles/colors';
 .currency-card {
     display: flex;
     border: 1px solid var(--card-border-color);
@@ -22,5 +23,8 @@
         font-size: 28px;
         line-height: 129%;
         color: var(--card-text-value);
+    }
+    &:hover{
+        box-shadow: 4px 6px 20px 0 $purple;
     }
 }

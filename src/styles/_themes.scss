@@ -23,7 +23,7 @@ html[data-theme="dark"] {
     --background-color-gradient:#{$light-background-gradient};
     --text-color-secondary: #{$dark-text};
     --card-color: #{$purple-accent};   
-    --card-border-color: #{$white};
+    --card-border-color: #{none};
     --card-text-title: #{$white};
     --card-text-value: #{$light-text};
     --link-color: #{$light-text};

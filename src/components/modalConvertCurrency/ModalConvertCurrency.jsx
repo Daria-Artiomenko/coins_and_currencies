@@ -50,7 +50,8 @@ const ModalConvertCurrency = ({onClose, currencySelect, exchangeRates}) => {
                         <input type="number"
                             className="modal-convert-input"
                             value={inputValueTo}
-                            onChange={calcExchange}/>
+                            onChange={calcExchange}
+                            readOnly={true}/>
                     </div>
                 </div>
             </div>
