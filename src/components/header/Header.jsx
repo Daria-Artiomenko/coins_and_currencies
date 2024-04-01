@@ -9,9 +9,11 @@ const Header = () => {
 
     return(
         <header className='header-main'>
-            <img src={logo} alt="logo" className='header-logo'/>
-            <HeaderNavigation/>
-            <Switch/>
+            <div className="header-container">
+                <img src={logo} alt="logo" className='header-logo'/>
+                <HeaderNavigation/>
+                <Switch/>
+            </div>
         </header>
     )
 

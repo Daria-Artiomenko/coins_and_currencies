@@ -1,8 +1,10 @@
 
 .header-main {
+    background: var(--background-color-accent);
+}
+.header-container {
     max-width: 1240px;
     height: 103px;
-    background-color:#030304;
     display: flex;
     justify-content: space-between;
     align-items: center;

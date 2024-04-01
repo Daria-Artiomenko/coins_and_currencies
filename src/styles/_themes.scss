@@ -1,0 +1,31 @@
+html[data-theme="dark"] {
+    transition: 0.25s all;
+    color-scheme: dark;
+  
+    --background-color: #{$dark};
+    --background-color-accent: #{$dark};
+    --background-color-gradient:#{$dark-background-gradient};
+    --text-color-secondary: #{$light-text};
+    --card-color: #{$dark-gray-card};   
+    --card-border-color: #{$dark-gray-card-border};
+    --card-text-title: #{$light-text};
+    --card-text-value: #{$gray-light-text};
+    --link-color: #{$gray-text};
+
+  }
+  
+  html[data-theme="light"] {
+    transition: 0.25s all;
+    color-scheme: light;
+
+    --background-color: #{$light};
+    --background-color-accent: #{$purple-accent};
+    --background-color-gradient:#{$light-background-gradient};
+    --text-color-secondary: #{$dark-text};
+    --card-color: #{$purple-accent};   
+    --card-border-color: #{$white};
+    --card-text-title: #{$white};
+    --card-text-value: #{$light-text};
+    --link-color: #{$light-text};
+  
+  }

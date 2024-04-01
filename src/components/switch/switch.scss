@@ -37,9 +37,9 @@
 }
   
 input:checked + .switch-slider {
-    border-color:  #DC005C;
+    border-color: #fff;
     &:before {
-    border-color:  #DC005C;
+    border-color: #fff;
     transform: translateX(20px);
     }
 }

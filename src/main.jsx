@@ -1,7 +1,8 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/app/App'
-import './index.css'
+import ThemeProvider from "./utils/ThemeProvider";
+import './index.scss'
 
 
 async function enableMocking() {
@@ -16,9 +17,9 @@ async function enableMocking() {
 
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
+    <ThemeProvider>
         <App />
-    </React.StrictMode>,
+    </ThemeProvider>,
   )
 })
 
