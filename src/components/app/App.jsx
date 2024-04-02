@@ -1,6 +1,6 @@
 import Header from '../header/Header';
-// import TimelinePage from '../pages/timelinePage/TimelinePage';
-import MainPage from '../pages/mainPage/MainPage';
+import TimelinePage from '../pages/timelinePage/TimelinePage';
+// import MainPage from '../pages/mainPage/MainPage';
 import Footer from '../footer/Footer';
 import {ThemeContext} from '../../utils/ThemeProvider';
 import { useContext, useEffect } from "react";
@@ -15,7 +15,7 @@ const App = () => {
     document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
     localStorage.setItem("currency-tracker-theme", theme ? "dark" : "light");
   }, [theme]);
-
+  // getPeriodData();
   // const {isLoading, error, data} = useQuery(['todos'],
   //       () => fetch('/todos').then(res => res.json()))
 
@@ -34,11 +34,12 @@ const App = () => {
   });
 
   return (
+    
     <QueryClientProvider client={queryClient}>
         <Header/>
         <main>
-            <MainPage/>
-            {/* <TimelinePage/> */}
+            {/* <MainPage/> */}
+            <TimelinePage/>
         </main>
 
         <Footer/>
