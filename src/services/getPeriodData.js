@@ -5,7 +5,7 @@ import buildChart from '../utils/buildChart';
 let config = {
   headers: {
     'Accept': 'application/json',
-    'X-CoinAPI-Key': '7C6B23E9-CAEF-4B70-8C16-BE84D63C271B'
+    'X-CoinAPI-Key': ''
   }
 }
 

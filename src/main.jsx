@@ -2,6 +2,7 @@
 import ReactDOM from 'react-dom/client'
 import App from './components/app/App'
 import ThemeProvider from "./utils/ThemeProvider";
+// import { QueryClientProvider, queryClient } from '@tanstack/react-query';
 import './index.scss'
 
 
@@ -18,12 +19,12 @@ async function enableMocking() {
 enableMocking().then(() => {
   ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider>
+      {/* <QueryClientProvider client={queryClient}> */}
         <App />
+      {/* </QueryClientProvider> */}
     </ThemeProvider>,
   )
 })
-
-
 
 
 
