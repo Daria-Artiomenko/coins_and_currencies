@@ -7,6 +7,7 @@ import { useContext, useEffect } from "react";
 import './App.css';
 import {QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import BankCardPage from '../pages/bankCardPage/BankCardPage';
+import ContactsPage from '../pages/contactsPage/ContactsPage';
 
 
 const App = () => {
@@ -41,7 +42,8 @@ const App = () => {
         <main>
             {/* <MainPage/> */}
             {/* <TimelinePage/> */}
-            <BankCardPage/>
+            {/* <BankCardPage/> */}
+            <ContactsPage/>
         </main>
 
         <Footer/>
