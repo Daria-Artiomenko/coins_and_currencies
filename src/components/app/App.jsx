@@ -1,14 +1,17 @@
-import Header from '../header/Header';
-// import TimelinePage from '../pages/timelinePage/TimelinePage';
-// import MainPage from '../pages/mainPage/MainPage';
-import Footer from '../footer/Footer';
-import {ThemeContext} from '../../utils/ThemeProvider';
-import { useContext, useEffect } from "react";
-import './App.css';
+import { useContext, useEffect, Suspense } from "react";
 import {QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import {ThemeContext} from '../../utils/ThemeProvider';
+
+import Header from '../header/Header';
+import TimelinePage from '../pages/timelinePage/TimelinePage';
+import MainPage from '../pages/mainPage/MainPage';
 import BankCardPage from '../pages/bankCardPage/BankCardPage';
 import ContactsPage from '../pages/contactsPage/ContactsPage';
+import Footer from '../footer/Footer';
 
+import './App.css';
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -17,12 +20,6 @@ const App = () => {
     document.documentElement.setAttribute("data-theme", theme ? "dark" : "light");
     localStorage.setItem("currency-tracker-theme", theme ? "dark" : "light");
   }, [theme]);
-  // getPeriodData();
-  // const {isLoading, error, data} = useQuery(['todos'],
-  //       () => fetch('/todos').then(res => res.json()))
-
-  // if (isLoading) return 'Loading...'
-  // if (error) return `An error has occurred:${error.message}`
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -38,15 +35,26 @@ const App = () => {
   return (
     
     <QueryClientProvider client={queryClient}>
-        <Header/>
-        <main>
-            {/* <MainPage/> */}
-            {/* <TimelinePage/> */}
-            {/* <BankCardPage/> */}
-            <ContactsPage/>
-        </main>
 
-        <Footer/>
+      <Router>
+        <Header/>
+
+          <main>
+            <Suspense fallback={<span>Loading...</span>}>
+
+              <Routes>
+                <Route path='/' element={<MainPage/>}/>
+                <Route path='/Timeline' element={<TimelinePage/>}/>
+                <Route path='/BankCard' element={<BankCardPage/>}/>
+                <Route path='/Contacts' element={<ContactsPage/>}/>
+              </Routes>
+
+            </Suspense>
+          </main>
+
+          <Footer/>
+      </Router>
+
     </QueryClientProvider>
   )
 }
