@@ -1,11 +1,12 @@
 import Header from '../header/Header';
-import TimelinePage from '../pages/timelinePage/TimelinePage';
+// import TimelinePage from '../pages/timelinePage/TimelinePage';
 // import MainPage from '../pages/mainPage/MainPage';
 import Footer from '../footer/Footer';
 import {ThemeContext} from '../../utils/ThemeProvider';
 import { useContext, useEffect } from "react";
 import './App.css';
 import {QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import BankCardPage from '../pages/bankCardPage/BankCardPage';
 
 
 const App = () => {
@@ -39,7 +40,8 @@ const App = () => {
         <Header/>
         <main>
             {/* <MainPage/> */}
-            <TimelinePage/>
+            {/* <TimelinePage/> */}
+            <BankCardPage/>
         </main>
 
         <Footer/>
