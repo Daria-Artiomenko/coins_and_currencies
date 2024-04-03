@@ -3,6 +3,7 @@
     padding-top: 48px;
     margin: 0 auto;
     &-select {
+        padding-top: 40px;
         display: flex;
         gap: 30px;
         &-label {
@@ -13,8 +14,10 @@
         &-curr {
             font-weight: 400;
             font-size: 30px;
-            color: #d9d9d9;
-            background: #030304;
+            // color: #d9d9d9;
+            // background: #030304;
+            color: var(--text-color-secondary);
+            background: var(--background-color);
             border-radius: 8px;
             border: none;
             width: 150px;
@@ -27,8 +30,10 @@
             margin-left: 10px;
             font-weight: 300;
             font-size: 20px;
-            color: #d9d9d9;
-            background: #030304;
+            // color: #d9d9d9;
+            // background: #030304;
+            color: var(--text-color-secondary);
+            background: var(--background-color);
             border-radius: 8px;
             border: 1px solid #5A5A5A;
             width: 200px;
@@ -38,6 +43,15 @@
             transition: all 0.25s ease;
 
         }
+    }
+    #history-chart {
+        max-width: 1224px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        display: flex;
+        justify-content: center;
+
     }
 
 }
