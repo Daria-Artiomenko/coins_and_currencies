@@ -1,6 +1,7 @@
 @import "styles/colors.scss";
 @import "styles/themes.scss";
 
+
 html {
   box-sizing: border-box;
 }
@@ -45,3 +46,5 @@ h6,
 p {
   margin: 0;
 }
+
+@import 'styles/media';

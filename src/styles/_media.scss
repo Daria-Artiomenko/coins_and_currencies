@@ -1,0 +1,272 @@
+@media(max-width: 1300px) {
+        //header
+    .header-container {
+        max-width: 1100px;
+    }
+        // currency list
+    .currency-cards {
+        .container {
+            max-width: 1100px;
+        }
+    }
+        // footer
+    .footer-wrapper {
+        max-width: 1100px;
+    }
+}
+
+@media(max-width: 1200px) {
+    //header
+    .header_links {
+        gap: 60px;
+    }
+    .header-container {
+        max-width: 900px;
+    }
+    // currency list
+    .currency-cards {
+        .container {
+            max-width: 900px;
+        }
+    }
+    // footer
+    .footer {
+        &-wrapper {
+            max-width: 900px;
+        }
+        &-info {
+            max-width: 460px;
+            &-title {
+                gap: 24px;
+            }
+            &-name {
+                font-size: 24px;
+            }
+            &-descr {
+                font-size: 18px;
+            }
+        }
+        &-nav {
+            &-column {
+                width: 120px;
+                gap: 40px;
+                &-title {
+                    font-size: 20px;
+                }
+                &-link {
+                    font-size: 16px;
+                }
+            }
+        }
+        &-rights {
+            font-size: 16px;
+        }
+    }
+    
+}
+@media (max-width: 991px) {
+    //header
+    .header_links {
+        gap: 40px;
+    }
+    .header-container {
+        max-width: 750px;
+    }
+    // promo 
+    .promo {
+        &-text {
+            text-align: center;
+            width: 480px;
+        }
+        &-title {
+            font-size: 86px;
+        }
+        &-descr {
+            font-size: 24px;
+        }
+        &-logo {
+            display: block;
+            width: 280px;
+            height: 293px;
+        }
+    }
+    //currency list
+    .currency-cards {
+        .container {
+            max-width: 750px;
+        }
+    }
+
+    //footer
+    .footer {
+        &-wrapper {
+            max-width: 750px;
+        }
+        &-info {
+            max-width: 350px;
+            &-title {
+                gap: 20px;
+            }
+            &-name {
+                font-size: 20px;
+            }
+            &-descr {
+                font-size: 16px;
+                margin-top: 30px;
+            }
+        }
+        &-nav {
+            &-column {
+                width: 110px;
+                gap: 30px;
+                &-title {
+                    font-size: 18px;
+                }
+                &-links {
+                    margin-top: 30px;
+                }
+                &-link {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-rights {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    //header
+    .header_links {
+        font-size: 16px;
+        gap: 40px;
+    }
+    .header-container {
+        max-width: 550px;
+    }
+    // promo 
+    .promo {
+        &-wrapper {
+            gap: 30px;
+        }
+        &-text {
+            text-align: center;
+            width: 400px;
+        }
+        &-title {
+            font-size: 72px;
+        }
+        &-descr {
+            font-size: 20px;
+            line-height: 157%;
+        }
+        &-logo {
+            display: block;
+            width: 200px;
+            height: 213px;
+        }
+    }
+    // last update
+    .last-update {
+        &-text {
+            font-size: 20px;
+        }
+    }
+    //currency list
+    .currency-cards {
+        .container {
+            max-width: 550px;
+        }
+        &-title{
+            font-size: 28px;
+        }
+        &-line {
+            width: 500px;
+            margin-top: 20px;
+        }
+    }
+    // currency card
+    .currency-card {
+        padding: 20px 20px 20px 20px;
+        width: 500px;
+        height: 133px;
+        margin-top: 50px;
+
+        &-name {
+            font-size: 24px;
+        }
+        &-value {
+            font-size: 20px;
+        }
+    }
+    //footer
+    .footer {
+        &-wrapper {
+            max-width: 550px;
+        }
+        &-info {
+            display: none;
+        }
+    }
+}
+@media (max-width: 575px) {
+    //header
+    .header_links {
+        font-size: 12px;
+        gap: 16px;
+    }
+    .header-container {
+        max-width: 360px;
+    }
+    .header-logo {
+        width: 30px;
+        height: 31px;
+    }
+    //switch
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+
+        &-slider {
+            &:before {
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 20px;
+            }
+        }
+        
+    }
+  
+    //promo
+    .promo {
+        &-text {
+            width: 360px;
+        }
+        &-logo {
+            display: none;
+        }
+    }
+    //currency list
+    .currency-cards {
+        .container {
+            max-width: 360px;
+        }
+        &-title{
+            font-size: 24px;
+        }
+        &-line {
+            width: 360px;
+        }
+    }
+    //footer
+    .footer {
+        &-wrapper {
+            max-width: 360px;
+        }
+    }
+}
