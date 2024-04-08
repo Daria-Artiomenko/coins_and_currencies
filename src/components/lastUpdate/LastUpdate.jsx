@@ -7,7 +7,7 @@ const LastUpdate = () => {
     const lastUpdateData = useQuery({ queryKey: ["lastUpdate"], queryFn: getExchange });
 
     const lastUpdate = lastUpdateData.data?.data.meta.last_updated_at.split('T')[1].slice(0, -1);
-    console.log(lastUpdate);
+
     return (
         <section className='last-update'> 
             <div className='last-update-container'> 

@@ -21,7 +21,7 @@ let config = {
                         return date;
                     })
                 };
-            //  return datas;
+
             buildChart(datas)
             })
 
