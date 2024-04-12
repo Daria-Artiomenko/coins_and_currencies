@@ -1,7 +1,7 @@
 import { currenciesInfo } from "../../data/currenciesInfo";
 import getPeriodData from "../../services/getPeriodData";
 import { useState, useEffect} from "react";
-
+import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 import './historyChart.scss'
 
 
@@ -15,6 +15,7 @@ const HistoryChart = () => {
         getPeriodData(selectCurrFrom, selectCurrTo, rangeStart, rangeEnd)
     }, [selectCurrFrom, selectCurrTo, rangeStart, rangeEnd])
 
+    
     return (
         <section className="history">
             <div className="history-select">
@@ -69,6 +70,7 @@ const HistoryChart = () => {
                     </label>
                 </div>
             </div>
+            
             <div id="history-chart">
                 <canvas id="myChart">
 
