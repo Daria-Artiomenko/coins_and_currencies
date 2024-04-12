@@ -29,6 +29,16 @@
             max-width: 900px;
         }
     }
+    //history chart
+    .history {
+        max-width: 900px;
+    }
+    //bank card
+    .about-cards {
+        &-container {
+            max-width: 900px;
+        }
+    } 
     // footer
     .footer {
         &-wrapper {
@@ -97,6 +107,17 @@
         }
     }
 
+    //history chart
+    .history {
+        max-width: 750px;
+    }
+
+    //bank card
+    .about-cards {
+        &-container {
+            max-width: 750px;
+        }
+    } 
     //footer
     .footer {
         &-wrapper {
@@ -200,6 +221,70 @@
             font-size: 20px;
         }
     }
+    //history chart
+    .history {
+        max-width: 550px;
+        &-select {
+            &-label {
+                font-size: 20px;
+            }
+            &-curr {
+                font-size: 24px;
+                width: 140px;
+            }
+            &-date {
+                font-size: 18px;
+                width: 180px;
+    
+            }
+        }
+        #history-chart {
+            max-width: 550px;
+        }
+    }
+    //bank card
+    .about-cards {
+        &-container {
+            max-width: 550px;
+        }
+        &-title {
+            font-size: 28px;
+        }
+        &-text {
+            font-size: 16px;
+        }
+        &-subtitle {
+            font-size: 24px;
+        }
+        &-descr {
+            font-size: 16px;
+        }
+    }
+    //contacts
+    .contacts {
+        &-container {
+            max-width: 550px;
+        }
+        &-title {
+            font-size: 28px;
+        }
+        &-phones {
+            &-subtitle {
+                font-size: 20px;
+            }
+            &-link {
+                font-size: 16px;
+            }
+        }
+        &-email {
+            &-subtitle {
+                font-size: 20px;
+            }
+            &-link{
+                font-size: 16px;
+            }
+        }
+    }
     //footer
     .footer {
         &-wrapper {
@@ -261,6 +346,79 @@
         }
         &-line {
             width: 360px;
+        }
+    }
+       //history chart
+       .history {
+        max-width: 360px;
+        &-select {
+            &-label {
+                font-size: 14px;
+            }
+            &-currency {
+                display: flex;
+                gap: 20px;
+            }
+            &-period {
+                display: flex;
+                gap: 20px;
+            }
+            &-curr {
+                font-size: 16px;
+                width: 140px;
+            }
+            &-date {
+                font-size: 16px;
+                width: 160px;
+    
+            }
+        }
+        #history-chart {
+            max-width: 360px;
+        }
+    
+    }
+    //bank card
+    .about-cards {
+        &-container {
+            max-width: 350px;
+        }
+        &-title {
+            font-size: 24px;
+        }
+        &-text {
+            font-size: 14px;
+        }
+        &-subtitle {
+            font-size: 20px;
+        }
+        &-descr {
+            font-size: 14px;
+        }
+    }
+    //contacts
+    .contacts {
+        &-container {
+            max-width: 350px;
+        }
+        &-title {
+            font-size: 20px;
+        }
+        &-phones {
+            &-subtitle {
+                font-size: 16px;
+            }
+            &-link {
+                font-size: 14px;
+            }
+        }
+        &-email {
+            &-subtitle {
+                font-size: 16px;
+            }
+            &-link{
+                font-size: 14px;
+            }
         }
     }
     //footer
