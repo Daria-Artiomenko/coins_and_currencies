@@ -2,7 +2,7 @@ import { HttpResponse, http } from "msw";
 import { apiBase, apiKey, currencies } from "../../services/getResponse";
 
 export default http.get(`${apiBase}/latest?apikey=&${apiKey}currencies=${currencies}`, () => {
-//   console.log('Captured a "latest" request', req.url.searchParams);
+
   return HttpResponse.json({
     "meta": {
         "last_updated_at": "2024-03-17T23:59:59Z"

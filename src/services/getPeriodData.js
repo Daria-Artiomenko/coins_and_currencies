@@ -1,11 +1,10 @@
 import axios from 'axios';
 import buildChart from '../utils/buildChart';
 
-// let url = 'https://rest.coinapi.io/v1/exchangerate/EUR/USD/history?period_id=1DAY&time_start=2024-03-27T00:00:00&time_end=2024-03-31T00:00:00';
 let config = {
   headers: {
     'Accept': 'application/json',
-    'X-CoinAPI-Key': ''
+    'X-CoinAPI-Key': '884BFF61-77BF-4F21-9711-94D1FA346600'
   }
 }
 

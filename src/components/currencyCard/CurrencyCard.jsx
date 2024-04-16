@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import './currencyCard.scss';
 
+import './currencyCard.scss';
 
 const CurrencyCard = (props) => {
     const {currency, exchangeValue, currencySymbol, thumbPath, onClick} = props;

@@ -14,7 +14,6 @@ export const getCurrencies = () => {
               currencies: currencies,
             },
           }).then((res) => {
-            // console.log(res);
             return res;
           })
     )
@@ -31,7 +30,6 @@ export async function getExchange() {
         currencies: currencies,
       },
     }).then((res) => {
-    //   console.log(res);
       return res;
     });
 }

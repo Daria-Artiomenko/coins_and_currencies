@@ -6,7 +6,7 @@ import './lastUpdate.scss'
 const LastUpdate = () => {
     const lastUpdateData = useQuery({ queryKey: ["lastUpdate"], queryFn: getExchange });
 
-    const lastUpdate = lastUpdateData.data?.data.meta.last_updated_at.split('T')[1].slice(0, -1);
+    const date = lastUpdateData.data?.data.meta.last_updated_at.split('T')[0];
 
     return (
         <section className='last-update'> 
@@ -14,7 +14,7 @@ const LastUpdate = () => {
                 <div className='last-update-block'>
                     <img src={circle} alt="circle"/>
                     <div className='last-update-text'>
-                        Last updated at <span>{lastUpdate}</span>
+                        Last updated at <span>{date}</span>
                     </div>
                 </div>
             </div>

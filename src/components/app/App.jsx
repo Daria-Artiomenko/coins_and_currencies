@@ -11,7 +11,7 @@ import BankCardPage from '../pages/bankCardPage/BankCardPage';
 import ContactsPage from '../pages/contactsPage/ContactsPage';
 import Footer from '../footer/Footer';
 
-import './App.css';
+import './app.scss';
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
