@@ -1,8 +1,13 @@
-# React + Vite
+<p align="center">
+  <img src='/src/assets/logo/logo.svg' width="320" height="129" display="block" margin-left="50%" text-align="center" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# <p align="center">Currencies and coins</p>
 
-Currently, two official plugins are available:
+## About the project ℹ️
+Project based on APIs - currencyapi and coinapi. In this web application, you can find out the current exchange rates, convert currency in a modal window, see the dynamics of currency changes over the period, switch the theme from dark to light and vice versa, acquainted with additional information about bank cards, utilized React Router for navigation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Build with ⚙️
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,scss,js,react)](https://skillicons.dev)
